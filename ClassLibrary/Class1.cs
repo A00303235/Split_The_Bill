@@ -2,7 +2,7 @@
 
 public class Class1
 {
-    
+
     // Created the First method
     public decimal SplitAmount(decimal totalAmount, int totalPeople)
     {
@@ -39,7 +39,7 @@ public class Class1
         return tipAmounts;
     }
 
-    // Created the Second method
+    // Created the third  method
     public decimal CalculateTipPerPerson(decimal price, int numberOfPatrons, float tipPercentage)
     {
         if (price <= 0)
