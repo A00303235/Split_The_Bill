@@ -6,3 +6,5 @@ Added refrences as required
 Created 3 methods
 build the project
 build successfull
+
+Added test cases but getting error in CalculateTip

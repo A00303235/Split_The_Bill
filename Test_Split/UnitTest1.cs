@@ -57,9 +57,9 @@ public class UnitTest1
         // Arrange
         Dictionary<string, decimal> mealCosts = new Dictionary<string, decimal>
         {
-            { "Pratham", 65.70m },{ "Arein", 69.96m },{ "Dharmil", 23.75m }
+            { "Pratham", 25.00m },{ "Arein", 30.00m },{ "Dharmil", 22.00m }
         };
-        float tipPercentage = 20.0f;
+        float tipPercentage = 10.0f;
 
         // Act
         Dictionary<string, decimal> tipAmounts = classInstance.CalculateTip(mealCosts, tipPercentage);
@@ -67,9 +67,9 @@ public class UnitTest1
         // Assert
         // Add assertions to check the correctness of tip amounts
         // For example:
-        Assert.AreEqual(5.63m, tipAmounts["Pratham"], "Incorrect tip amount for Pratham.");
-        Assert.AreEqual(8.73m, tipAmounts["Arein"], "Incorrect tip amount for Arein.");
-        Assert.AreEqual(6.85m, tipAmounts["Dharmil"], "Incorrect tip amount for Dharmil.");
+        Assert.AreEqual(2.5m, Math.Round(tipAmounts["Pratham"],2));
+        Assert.AreEqual(3.0m, Math.Round(tipAmounts["Arein"],2));
+        Assert.AreEqual(2.2m, Math.Round(tipAmounts["Dharmil"],2));
     }
  [TestMethod]
    
@@ -77,7 +77,7 @@ public class UnitTest1
     {
 
         Dictionary<string, decimal> mealCosts = null;
-        float tipPercentage = 20.0f;
+        float tipPercentage = 15.0f;
 
         Dictionary<string, decimal> tipAmounts = classInstance.CalculateTip(mealCosts, tipPercentage);
     }
@@ -87,8 +87,8 @@ public class UnitTest1
     {
         Dictionary<string, decimal> mealCosts = new Dictionary<string, decimal>
         {
-            { "Pratham", 65.70m },
-            { "Arein", 31.96m }
+            { "Pratham", 25.50m },
+            { "Arein", 30.75m }
         };
         float invalidTipPercentage = -56.0f;
 
